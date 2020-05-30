@@ -12,7 +12,7 @@ export default class TransposePage extends Component {
     this.state = {
       dataset1: '',
       dataset2: '',
-      dataset3: '',
+      resultset: '',
     };
 
     // This binding is necessary to make `this` work in the callback
@@ -41,7 +41,7 @@ export default class TransposePage extends Component {
       }
     }
 
-    this.setState({dataset3: outputResut});
+    this.setState({resultset: outputResut});
   }
 
   render() {
@@ -86,8 +86,8 @@ export default class TransposePage extends Component {
             <textarea
               className="form-control"
               disabled
-              value={this.state.dataset3}
-              id="dataset3"
+              value={this.state.resultset}
+              id="resultset"
               rows="15"
             />
           </div>
