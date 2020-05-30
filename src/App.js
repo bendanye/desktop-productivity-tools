@@ -4,7 +4,7 @@ import history from "./lib/history";
 
 import NavBar from './components/navbar/NavBar';
 import HomePage from './components/home/HomePage';
-import LinkPage from './LinkPage';
+import TransposePage from './components/transpose/TransposePage';
 
 export default class App extends React.Component {
   render() {    
@@ -15,7 +15,7 @@ export default class App extends React.Component {
             <NavBar />
             <Switch>
               <Route exact path='/' component={HomePage} />
-              <Route exactly path='/link' component={LinkPage} />
+              <Route exactly path='/transpose' component={TransposePage} />
             </Switch>
           </div>
         </Router>

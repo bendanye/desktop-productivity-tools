@@ -1,0 +1,15 @@
+#st-box { 
+    float:left; 
+    background-color:white; 
+} 
+#nd-box { 
+    float:left; 
+    background-color:white;  
+    margin-left:20px; 
+} 
+#ld-box { 
+    float:left; 
+    background-color:white;  
+    margin-left:40px; 
+} 
+       

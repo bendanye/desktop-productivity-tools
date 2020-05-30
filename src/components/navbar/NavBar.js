@@ -13,7 +13,7 @@ export default class NavBar extends React.Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/link">Link</Nav.Link>
+                    <Nav.Link as={Link} to="/transpose">Transpose</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
