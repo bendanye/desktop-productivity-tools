@@ -1,9 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import TransposePage from './TransposePage';
 
-storiesOf('TransposePage', module)
-    .add('Default', () => (
-      <TransposePage />
-    ));
+export default {
+  component: TransposePage,
+  title: 'TransposePage'
+};
+
+export const Default = () => 
+  <TransposePage />;
