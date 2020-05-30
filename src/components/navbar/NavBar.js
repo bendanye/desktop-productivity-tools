@@ -8,7 +8,7 @@ export default class NavBar extends React.Component {
     render() {    
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand as={Link} to="/">Desktop Productivity Tools</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">Be-more Productivity Tools</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

@@ -5,7 +5,7 @@ function HomePage() {
     <div className="App">
       <header className="App-header">
         <p>
-          Welcome to Desktop Productivity Tools!
+          Welcome to Be-more Productivity Tools (BPT)!
         </p>
       </header>
     </div>

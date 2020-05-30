@@ -1,9 +1,9 @@
 {
-  "name": "desktop-productivity-tools",
+  "name": "bpt",
   "version": "0.1.0",
   "main": "public/electron.js",
   "author": "bendanye",
-  "description": "A Desktop application for lazy person to manipulate data in Excel",
+  "description": "An application for lazy person to manipulate data in Excel",
   "homepage": "./",
   "private": true,
   "build": {
