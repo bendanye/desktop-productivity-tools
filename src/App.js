@@ -2,8 +2,8 @@ import React from 'react';
 import {Router, Route, Switch} from "react-router-dom";
 import history from "./lib/history";
 
-import NavBar from './NavBar';
-import HomePage from './HomePage';
+import NavBar from './components/navbar/NavBar';
+import HomePage from './components/home/HomePage';
 import LinkPage from './LinkPage';
 
 export default class App extends React.Component {

@@ -5,7 +5,7 @@ function HomePage() {
     <div className="App">
       <header className="App-header">
         <p>
-          Welcome to Home!
+          Welcome to Desktop Productivity Tools!
         </p>
       </header>
     </div>
