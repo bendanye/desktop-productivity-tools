@@ -16,12 +16,17 @@ const runVlookup = (params) => {
 
     _.each(parsedDataSet.data, obj => {
 
-        let subSearchQuery = `${colsSearchBy[0]}==${obj[colsSearchBy[0]]}`;
+        let subSearchQuery = `${colsSearchBy[0]} == '${obj[colsSearchBy[0]]}' `;
 
-        //console.log(searchQuery)
+        for(let i = 1; i<colsSearchBy.length; i++) {
+            subSearchQuery += ` && ${colsSearchBy[i]} == '${obj[colsSearchBy[i]]}'`
+        }
 
-        const searchQuery = `data[?'${subSearchQuery}'].${colsOutput[0]} | [0]`;
-        obj[colsOutput[0]] = jmespath.search(parsedCriteriaSet, searchQuery);
+        for(let i in colsOutput) {
+            const searchQuery = `data[?${subSearchQuery}].${colsOutput[i]} | [0]`;
+            console.log(jmespath.search(parsedCriteriaSet, searchQuery))
+            obj[colsOutput[i]] = jmespath.search(parsedCriteriaSet, searchQuery);
+        }
     });
 
     return jsonToCSV(parsedDataSet.data);
