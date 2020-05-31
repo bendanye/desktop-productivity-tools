@@ -50,7 +50,7 @@ export default class TransposePage extends Component {
         <h1>Transpose</h1>
         <header className="App-header">
           <p>
-            Welcome to Transpose (sorry lack of better words) Utility!
+            This tool is to convert both set of data from each row into combined a single row
           </p>
         </header>
   
