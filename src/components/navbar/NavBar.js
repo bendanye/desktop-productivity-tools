@@ -14,6 +14,8 @@ export default class NavBar extends React.Component {
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/transpose">Transpose</Nav.Link>
+                    <Nav.Link as={Link} to="/vlookup">Vlookup</Nav.Link>
+                    <Nav.Link as={Link} to="/filter">Filter</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
