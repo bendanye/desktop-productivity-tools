@@ -22,16 +22,16 @@ export default class TransposePage extends Component {
   }
 
   handleDataSet1Change(event) {
-    this.setState({dataset1: event.target.value.trim()});
+    this.setState({dataset1: event.target.value});
   }
 
   handleDataSet2Change(event) {
-    this.setState({dataset2: event.target.value.trim()});
+    this.setState({dataset2: event.target.value});
   }
 
   handleButtonClick() {
-    const dataset1Arr = this.state.dataset1.split("\n");
-    const dataset2Arr = this.state.dataset2.split("\n");
+    const dataset1Arr = this.state.dataset1.trim().split("\n");
+    const dataset2Arr = this.state.dataset2.trim().split("\n");
 
     let outputResut = "";
 
