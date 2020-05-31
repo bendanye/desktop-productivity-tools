@@ -24,7 +24,6 @@ const runVlookup = (params) => {
 
         for(let i in colsOutput) {
             const searchQuery = `data[?${subSearchQuery}].${colsOutput[i]} | [0]`;
-            console.log(jmespath.search(parsedCriteriaSet, searchQuery))
             obj[colsOutput[i]] = jmespath.search(parsedCriteriaSet, searchQuery);
         }
     });

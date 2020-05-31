@@ -30,5 +30,19 @@ describe('components/vlookup', () => {
             expect(result).toMatch("john@test.com,john walker,abc,apple");
             expect(result).toMatch("johnwalk@test.com,john walker,test");
         });
+
+        test('should succeed with one searchCriteria and two outputCol', () => {
+            const dataSet = "email,name,address\njohn@test.com,john walker,abc\njohnwalk@test.com,john walker,test";
+            const criteriaSet = "email,name,order,type\njohn@test.com,john walker,apple,fruit";
+            const colsSearchBy = ["email"];
+            const colsOutput = ["order", "type"];
+            const result = runVlookup({
+                dataSet, 
+                criteriaSet,
+                colsSearchBy,
+                colsOutput
+            });
+            expect(result).toMatch("john@test.com,john walker,abc,apple,fruit");
+        });
     });
 });
