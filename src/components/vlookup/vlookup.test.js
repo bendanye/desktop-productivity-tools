@@ -5,9 +5,13 @@ describe('components/vlookup', () => {
         test('should succeed', () => {
             const dataSet = "email,name,address\njohn@test.com,john walker,abc";
             const criteriaSet = "email,order\njohn@test.com,apple";
+            const colsSearchBy = ["email"];
+            const colsOutput = ["order"];
             const result = runVlookup({
                 dataSet, 
-                criteriaSet
+                criteriaSet,
+                colsSearchBy,
+                colsOutput
             });
             expect(result).toMatch("john@test.com,john walker,abc,apple");
         });

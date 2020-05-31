@@ -9,16 +9,19 @@ const parseOptions = {
 
 const runVlookup = (params) => {
 
-    const { dataSet, criteriaSet } = params
+    const { dataSet, criteriaSet, colsSearchBy, colsOutput } = params
     
     const parsedDataSet = readString(dataSet, parseOptions);
     const parsedCriteriaSet= readString(criteriaSet, parseOptions);
 
     _.each(parsedDataSet.data, obj => {
 
-        let idByEmail = `data[?email=='${obj.email}'].order | [0]`;
-        obj.found = jmespath.search(parsedCriteriaSet, idByEmail);
-        console.log(jmespath.search(parsedCriteriaSet, idByEmail))
+        let subSearchQuery = `${colsSearchBy[0]}==${obj[colsSearchBy[0]]}`;
+
+        //console.log(searchQuery)
+
+        const searchQuery = `data[?'${subSearchQuery}'].${colsOutput[0]} | [0]`;
+        obj[colsOutput[0]] = jmespath.search(parsedCriteriaSet, searchQuery);
     });
 
     return jsonToCSV(parsedDataSet.data);
