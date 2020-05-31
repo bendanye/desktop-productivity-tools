@@ -1,4 +1,4 @@
-const { runVlookup } = require('../../../src/components/vlookup/vlookup')
+const { runVlookup } = require('./vlookup')
 
 describe('components/vlookup', () => {
     describe('runVlookup', () => {
